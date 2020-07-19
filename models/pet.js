@@ -7,6 +7,14 @@ module.exports = (sequelize, DataTypes) => {
         area: {
             type: DataTypes.STRING,
             allowNull:false,
+        },
+        rarity: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        color: {
+            type: DataTypes.INTEGER,
+            allowNull: false
         }
     })
 
@@ -20,3 +28,4 @@ module.exports = (sequelize, DataTypes) => {
 
     return Pet;
 };
+

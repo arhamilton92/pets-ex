@@ -16,6 +16,9 @@ app.use('/api/collections', profileRoutes);
 const postRoutes = require('./routes/pet-routes')
 app.use('/api/pets', postRoutes)
 
+const monsterRoutes = require('./routes/monster-routes')
+app.use('/api', monsterRoutes)
+
 db.sequelize.sync().then(() => {
     app.listen(PORT, () => {
         console.log(`listening at ${PORT}`)

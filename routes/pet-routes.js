@@ -12,9 +12,10 @@ router.post('/new', (req, res) => {
 
 router.get('/find/:id', (req, res) => {
     db.Pet.findAll({
-        where: {collectionId: req.params.id},
-        include: [db.User]
+        where: {area: req.params.id},
     }).then(pet => res.send(pet));
+    
 })
+
 
 module.exports = router;
